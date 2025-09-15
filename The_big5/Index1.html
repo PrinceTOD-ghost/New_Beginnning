@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>The_big5-Project work</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: #667eea;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #667eea;
+        }
+        
+        .auth-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .login-btn {
+            background: transparent;
+            color: #667eea;
+            margin-right: 10px;
+        }
+        
+        .login-btn:hover {
+            background: #f5f5f5;
+        }
+        
+        .signup-btn {
+            background: #667eea;
+            color: white;
+        }
+        
+        .signup-btn:hover {
+            background: #5a6fd8;
+        }
+        
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 5%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .cta-button {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #5a6fd8;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features {
+            padding: 60px 5%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .feature-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .feature-card {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            
+            .feature-cards {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Educational website logo" width="100" height="75">
+                <span>The_big5</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="location.href='login.html'">Log In</button>
+                <button class="signup-btn" onclick="location.href='sign_up.html'">Sign Up</button>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Collaborate. Innovate. Succeed Together.</h1>
+                <p>The_big5. Our group project is a website that makes learning resources readily available to students. This is where students can access textbooks, notes for studies, and test questions to help them also prepare for their exams or their academic journey. This websote is not aa complete one as it is just for a group project but this project has guven us the idea to work on perfecting this website as it can help solve real world problems like the difficullt strss students have to go through to get learning materials online. </p>
+                <button class="cta-button" onclick="location.href='#features'">Explore Features</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/Group study.jpeg" alt="Students In A Group Studying">
+            </div>
+        </section>
+        
+        <section class="features" id="features">
+            <h2>Why Choose The_big5?</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Collaboration</h3>
+                    <p>Work together with people in your field of study around the globe, share ideas, and achieve your goals faster with our collaboration tools.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure & Private</h3>
+                    <p>Your data is protected with enterprise-grade security measures and encryption protocols.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Fast & Reliable</h3>
+                    <p>Experience lightning-fast connection with people worldwide. </p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 The_big5. All rights reserved. | Designed with ❤️ for better collaboration</p>
+        </footer>
+    </div>
+</body>
+</html>
