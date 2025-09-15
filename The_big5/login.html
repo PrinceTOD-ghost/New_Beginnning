@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page Group Work</title>
+    <style>
+        body{
+            font-family:  Helvetic Neue, Helvetica, Arial, sans-serif;
+            background-color: rgb(82, 197, 250);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .login-container{
+            background-color:aqua;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group{
+            margin-bottom: 15px;
+        }
+
+        .form-group label{
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input[type="email"],
+        .form-group input[type="text"],
+        .form-group input[type="password"]{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #add;
+            border-radius: 4px;
+            box-sizing: border-box;/*Ensures padding doesn't increase width*/
+        }
+
+       .login-button {
+            width: 100%;
+            padding: 12px;
+            background: #4a6de5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .login-button:hover {
+            background: #3a5bd0;
+        }
+        
+
+        .remember-fogot{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .remember-forgot label {
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+
+         .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            color: black;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid black;
+        }
+        
+        .separator span {
+            padding: 0 15px;
+        }
+
+        .remember-forgot a {
+            color: #4a6de5;
+            text-decoration: none;
+        }
+
+         .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Welcome Back</h2>
+            <p>Sign in to continue to your account</p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>   
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <button type="submit" class="login-button">Login</button>
+
+            <div class="remember">
+                <label for="remember me">
+                    <input type="checkbox">Remember Me     
+                </label>
+            </div>
+            <div class="separator">
+                <span>To continue with</span>
+            </div>
+            <div class="Forgot">    
+                Don't have an account?<a href="sign_up.html">Forgot Password?</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
